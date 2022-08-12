@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: rgb(217, 210, 197);
+    border-radius: 5px;
+}
+
+.checkbox {
+    margin-right: 8px;
+}
