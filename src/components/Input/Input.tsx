@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
+import classes from './style.css';
 
-export default function Input() {
-  return (
-    <div>Input</div>
+export const Input = () => {
+  return(
+    <input type="text" placeholder='Add new task' className={classes.input}/>
   )
 }

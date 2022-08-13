@@ -1,5 +1,8 @@
 .container {
     display: flex;
+    justify-content: space-between;
+    max-width: 650px;
+    width: 80%;
     align-items: center;
     padding: 15px;
     margin-bottom: 15px;
@@ -9,4 +12,42 @@
 
 .checkbox {
     margin-right: 8px;
+}
+
+.delete {
+  width: 22px;
+  height: 22px;
+  margin-left: 10px;
+  background-image: url('../../assets/trash.svg');
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: cover;
+  transition: background 0.5s linear;
+  filter: invert(63%) sepia(18%) saturate(452%) hue-rotate(260deg) brightness(86%) contrast(91%);
+  cursor: pointer;
+}
+
+.edit {
+  width: 22px;
+  height: 22px;
+  background-image: url('../../assets/edit.svg');
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: cover;
+  transition: background 0.5s linear;
+  filter: invert(63%) sepia(18%) saturate(452%) hue-rotate(260deg) brightness(86%) contrast(91%);
+  cursor: pointer;
+}
+
+
+.edit:hover {
+  filter: invert(33%) sepia(18%) saturate(42%) hue-rotate(260deg) brightness(86%) contrast(91%);
+}
+
+.delete:hover {
+  filter: invert(33%) sepia(18%) saturate(42%) hue-rotate(260deg) brightness(86%) contrast(91%);
+}
+
+.container_btns {
+    display: flex;
 }

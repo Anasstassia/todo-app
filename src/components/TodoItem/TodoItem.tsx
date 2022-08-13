@@ -23,8 +23,14 @@ export const todos: TaskProps[] = [
 export const TodoItem = (todo: TaskProps) => {
   return (
     <div className={classes.container}>
-      <input type="checkbox" className={classes.checkbox} ></input>
-      {todo.description}
+      <div className="">
+        <input type="checkbox" className={classes.checkbox} ></input>
+        <span> {todo.description} </span>
+      </div>
+      <div className={classes.container_btns}>
+        <div aria-label="delete" title="edit" className={classes.edit}></div>
+        <div aria-label="delete" title="delete" className={classes.delete}></div>
+      </div>
     </div>
   )
 }
