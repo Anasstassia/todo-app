@@ -2,34 +2,39 @@ import React from 'react';
 import classes from './style.css';
 
 type TaskProps = {
-  key: number;
+  id: number;
   description: string;
   isCompleted: boolean;
 };
 
-export const todos: TaskProps[] = [
+export const data: TaskProps[] = [
    {
-      key: 1,
+      id: 1,
       description: 'todo123',
       isCompleted: false
     },
    {
-      key: 2,
+      id: 2,
       description: 'todo1234124',
       isCompleted: true
     },
 ];
 
-export const TodoItem = (todo: TaskProps) => {
+type TodoProps = TaskProps & {
+  changeTask: (id:number) => void,
+  deleteTask: (id: number) =>void
+}
+
+export const TodoItem = ({id, description, isCompleted, changeTask, deleteTask}: TodoProps) => {
   return (
-    <div className={classes.container}>
-      <div className="">
-        <input type="checkbox" className={classes.checkbox} ></input>
-        <span> {todo.description} </span>
+    <div className={`${classes.container} ${isCompleted ? classes.completed_bg : ''}`}>
+      <div>
+        <input type="checkbox" className={classes.checkbox} onChange={() => changeTask(id)} checked={isCompleted} />
+        <span className={isCompleted ? classes.completed_text : ''}> {description} </span>
       </div>
       <div className={classes.container_btns}>
-        <div aria-label="delete" title="edit" className={classes.edit}></div>
-        <div aria-label="delete" title="delete" className={classes.delete}></div>
+        <button className={classes.edit}></button>
+        <button className={classes.delete} onClick={() => deleteTask(id)}></button>
       </div>
     </div>
   )

@@ -17,6 +17,7 @@
 .delete {
   width: 22px;
   height: 22px;
+  border: none;
   margin-left: 10px;
   background-image: url('../../assets/trash.svg');
   background-repeat: no-repeat;
@@ -25,11 +26,14 @@
   transition: background 0.5s linear;
   filter: invert(63%) sepia(18%) saturate(452%) hue-rotate(260deg) brightness(86%) contrast(91%);
   cursor: pointer;
+  transition: 0.3s;
+
 }
 
 .edit {
   width: 22px;
   height: 22px;
+  border: none;
   background-image: url('../../assets/edit.svg');
   background-repeat: no-repeat;
   background-color: transparent;
@@ -37,6 +41,8 @@
   transition: background 0.5s linear;
   filter: invert(63%) sepia(18%) saturate(452%) hue-rotate(260deg) brightness(86%) contrast(91%);
   cursor: pointer;
+  transition: 0.3s;
+
 }
 
 
@@ -50,4 +56,12 @@
 
 .container_btns {
     display: flex;
+}
+
+.completed_bg {
+    background-color: rgb(176, 212, 176);
+}
+
+.completed_text {
+  text-decoration: line-through;
 }
