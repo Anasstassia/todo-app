@@ -1,11 +1,11 @@
 import React from 'react';
 import classes from './style.css';
 
-// type ButtonProps = {addTask: (description: string) => void}
+type ButtonProps = {onClick: () => void}
 
-export const Button = (/*{addTask}: ButtonProps*/) => {
+export const Button = ({onClick}: ButtonProps) => {
   return (
-    <button className={classes.button}> + </button>
+    <button className={classes.button} onClick={() => onClick()}> + </button>
   )
 }
 

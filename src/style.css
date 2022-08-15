@@ -31,5 +31,6 @@ body {
 
 .todo_area {
     width: 300px;
-    background: white;
+    border: 1px solid black;
+    border-radius: 8px;
 }

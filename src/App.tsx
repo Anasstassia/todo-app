@@ -29,8 +29,7 @@ export const App = () => {
    return <div className={classes.container}>
       <Header />
       <div className={classes.container_add}>
-         <TodoPanel />
-         <Button />
+         <TodoPanel addTask={addTask}/>
       </div>
       <div className={classes.area_container}>
          <div className={classes.container}>
