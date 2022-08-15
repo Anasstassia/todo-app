@@ -1,9 +1,11 @@
 import React from 'react';
 import classes from './style.css';
 
-export const Button = () => {
-  return(
-    <button className={classes.button}>+</button>
+// type ButtonProps = {addTask: (description: string) => void}
+
+export const Button = (/*{addTask}: ButtonProps*/) => {
+  return (
+    <button className={classes.button}> + </button>
   )
 }
 

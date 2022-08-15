@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     max-width: 650px;
-    width: 80%;
+    width: 380px;
     align-items: center;
     padding: 15px;
     margin-bottom: 15px;
@@ -60,6 +60,12 @@
 
 .completed_bg {
     background-color: rgb(176, 212, 176);
+}
+
+.text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .completed_text {

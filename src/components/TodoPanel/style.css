@@ -1,5 +1,5 @@
 .input {
-  width: 300px;
+  width: 250px;
   height: 30px;
   border: none;
   border-bottom: 1px solid #dc9a28;
@@ -8,4 +8,8 @@
   outline: none;
   line-height: 20px;
   padding-bottom: 6px;
+}
+
+.container_inputs {
+  display: contents;
 }

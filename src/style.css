@@ -10,7 +10,7 @@ body {
     align-content: center;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    /* width: 80%; */
     color: black;
     font-size: 18px;
     padding: 20px;
@@ -18,8 +18,18 @@ body {
 
 .container_add {
     display: flex;
-    min-width: 250px;
+    width: 70%;
+    /* min-width: 250px; */
     justify-content: space-between;
     margin-bottom: 25px;
 
+}
+
+.area_container {
+    display: flex;
+}
+
+.todo_area {
+    width: 300px;
+    background: white;
 }
