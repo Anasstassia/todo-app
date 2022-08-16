@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './style.css';
 
-type TaskProps = {
+export type TaskProps = {
   id: number;
   title: string;
   description: string;
@@ -25,10 +25,11 @@ export const data: TaskProps[] = [
 
 type TodoProps = TaskProps & {
   changeTask: (id:number) => void,
-  deleteTask: (id: number) => void
+  deleteTask: (id: number) => void,
+  editTask: (id: number) => void
 }
 
-export const TodoItem = ({id, title, description, isCompleted, changeTask, deleteTask}: TodoProps) => {
+export const TodoItem = ({id, title, description, isCompleted, changeTask, deleteTask, editTask}: TodoProps) => {
   return (
     <div className={`${classes.container} ${isCompleted ? classes.completed_bg : ''}`}>
       <div className={classes.text}>
@@ -36,7 +37,7 @@ export const TodoItem = ({id, title, description, isCompleted, changeTask, delet
         <span className={isCompleted ? classes.completed_text : ''}> {title} </span>
       </div>
       <div className={classes.container_btns}>
-        <button className={classes.edit}></button>
+        <button className={classes.edit} onClick={() => editTask(id)}></button>
         <button className={classes.delete} onClick={() => deleteTask(id)}></button>
       </div>
     </div>

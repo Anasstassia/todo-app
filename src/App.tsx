@@ -3,10 +3,12 @@ import classes from './style.css';
 import {Header} from './components/Header/Header';
 import {TodoItem, data} from './components/TodoItem/TodoItem';
 import {TodoPanel} from './components/TodoPanel/TodoPanel';
-import {Button} from './components/Button/Button';
+import {DescriptionPanel} from './components/DescriptionPanel/DescriptionPanel';
 
 export const App = () => {
    const [tasks, setTasks] = useState(data);
+
+   const [currentTaskId, setCurrentTaskId] = useState<number>();
 
    const addTask = (title: string, description: string) => {
       const newId = Math.floor(Math.random() * 1000);
@@ -25,6 +27,10 @@ export const App = () => {
       const newTasks =  tasks.filter(task => task.id !== id);
       setTasks(newTasks);
    };
+
+   const editTask = (id: number) => {
+     setCurrentTaskId(id);
+   }
    
    return <div className={classes.container}>
       <Header />
@@ -34,10 +40,10 @@ export const App = () => {
       <div className={classes.area_container}>
          <div className={classes.container}>
             {tasks.map(todo => (
-               <TodoItem key={todo.id} id={todo.id}  title={todo.title} description={todo.description} isCompleted={todo.isCompleted} changeTask={changeTask} deleteTask={deleteTask}/>
+               <TodoItem key={todo.id} id={todo.id}  title={todo.title} description={todo.description} isCompleted={todo.isCompleted} changeTask={changeTask} deleteTask={deleteTask} editTask={editTask}/>
             ))}
          </div>
-         <div className={classes.todo_area}></div>
+         <DescriptionPanel editTask={editTask} currentTask={tasks.find(task => task.id === currentTaskId)}/>
       </div>
    </div>
 };

@@ -24,11 +24,7 @@ body {
 
 .area_container {
     display: flex;
-}
-
-.todo_area {
-    max-width: 500px;
-    width: 45vw;
-    border: 1px solid black;
+    background-color: beige;
     border-radius: 8px;
+
 }
