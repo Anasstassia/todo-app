@@ -11,5 +11,7 @@
 }
 
 .container_inputs {
-  display: contents;
+  display: flex;
+  justify-content: space-between;
+  width: 540px;
 }

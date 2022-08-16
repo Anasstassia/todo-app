@@ -7,13 +7,14 @@ export const TodoPanel = ({addTask}: {addTask: (title: string, description: stri
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
 
+  const isDisabled = !Boolean(title && description)
   return (
     <>
         <div className={classes.container_inputs}>  
             <input type="text" placeholder='Title' className={classes.input} value={title} onChange={e => setTitle(e.target.value)}/>
             <input type="text" placeholder='Add description' value={description} className={classes.input} onChange={e => setDescription(e.target.value)}/>
         </div>
-        <Button onClick={() => {addTask(title, description); setTitle(''); setDescription('')}}/>
+        <Button onClick={() => {addTask(title, description); setTitle(''); setDescription('')}} isDisabled={isDisabled}/>
     </>
 
   )

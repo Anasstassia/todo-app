@@ -10,7 +10,6 @@ body {
     align-content: center;
     align-items: center;
     justify-content: center;
-    /* width: 80%; */
     color: black;
     font-size: 18px;
     padding: 20px;
@@ -18,11 +17,9 @@ body {
 
 .container_add {
     display: flex;
-    width: 70%;
-    /* min-width: 250px; */
+    width: 620px;
     justify-content: space-between;
-    margin-bottom: 25px;
-
+    margin-bottom: 50px;
 }
 
 .area_container {
@@ -30,7 +27,8 @@ body {
 }
 
 .todo_area {
-    width: 300px;
+    max-width: 500px;
+    width: 45vw;
     border: 1px solid black;
     border-radius: 8px;
 }
