@@ -31,6 +31,13 @@ export const App = () => {
    const editTask = (id: number) => {
      setCurrentTaskId(id);
    }
+
+   const updateTask = (id: number, title: string, description: string) => {
+      const newTasks =  tasks.map(task => task.id === id ? 
+         {...task, title, description} 
+         : task)
+      setTasks(newTasks);
+   }
    
    return <div className={classes.container}>
       <Header />
@@ -43,7 +50,7 @@ export const App = () => {
                <TodoItem key={todo.id} id={todo.id}  title={todo.title} description={todo.description} isCompleted={todo.isCompleted} changeTask={changeTask} deleteTask={deleteTask} editTask={editTask}/>
             ))}
          </div>
-         <DescriptionPanel editTask={editTask} currentTask={tasks.find(task => task.id === currentTaskId)}/>
+         <DescriptionPanel editTask={editTask} updateTask={updateTask} currentTask={tasks.find(task => task.id === currentTaskId)}/>
       </div>
    </div>
 };
