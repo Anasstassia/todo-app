@@ -1,15 +1,8 @@
-# 🚀 Welcome to your new awesome project!
+# Тестовое задание TODO List на React
 
-This project has been created using **webpack-cli**, you can now run
-
-```
-npm run build
-```
-
-or
+Чтобы запустить приложение, используйте
 
 ```
-yarn build
+npm run serve
 ```
 
-to bundle your application
