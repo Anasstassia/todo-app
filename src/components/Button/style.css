@@ -1,16 +1,16 @@
 .button {
-    width: 35px;
-    height: 35px;
-    border: none;
-    border-radius: 50%;
-    background-image: url('../../assets/plus.svg');
-    background-color: burlywood;
-    background-repeat: no-repeat;
-    background-size: cover;
-    cursor: pointer;
-    transition: 0.3s;
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 50%;
+  background-image: url('../../assets/plus.svg');
+  background-color: burlywood;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .button:hover {
-    background-color: rgb(200, 137, 56);
+  background-color: rgb(200, 137, 56);
 }

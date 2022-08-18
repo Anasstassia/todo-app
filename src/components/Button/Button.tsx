@@ -1,11 +1,12 @@
 import React from 'react';
 import classes from './style.css';
 
-type ButtonProps = {onClick: () => void, isDisabled: boolean}
+// тип для аргументов, которые принимает кнопка добавления новой заметки TODO
+type ButtonProps = { onClick: () => void; isDisabled: boolean };
 
-export const Button = ({onClick, isDisabled}: ButtonProps) => {
+// компонент кнопки добавления новой заметки TODO
+export const Button = ({ onClick, isDisabled }: ButtonProps) => {
   return (
     <button className={classes.button} onClick={() => onClick()} disabled={isDisabled}></button>
-  )
-}
-
+  );
+};
